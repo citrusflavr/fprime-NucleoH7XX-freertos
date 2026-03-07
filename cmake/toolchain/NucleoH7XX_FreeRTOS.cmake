@@ -1,5 +1,5 @@
 ####
-# FeatherM4_FreeRTOS.cmake:
+# NucleoH7XX_FreeRTOS.cmake:
 #
 #
 ####
@@ -8,25 +8,25 @@ add_compile_options(-std=c++17 -std=gnu++17)
 set(CMAKE_SYSTEM_NAME "Generic")
 set(CMAKE_SYSTEM_PROCESSOR "arm")
 set(CMAKE_CROSSCOMPILING 1)
-set(FPRIME_PLATFORM "FeatherM4_FreeRTOS")
+set(FPRIME_PLATFORM "NucleoH7XX_FreeRTOS")
 set(FPRIME_USE_BAREMETAL_SCHEDULER OFF)
 set(ARDUINO_BUILD_PROPERTIES
     "compiler.c.extra_flags=-DINCLUDE_xSemaphoreGetMutexHolder=1"
     "compiler.cpp.extra_flags=-DINCLUDE_xSemaphoreGetMutexHolder=1"
 )
 
+# Disable CMake compiler checks
 set(CMAKE_C_COMPILER_WORKS 1)
 set(CMAKE_CXX_COMPILER_WORKS 1)
 
 
-# START: Changed from Adafruit Feather M4 To STM32H723ZG
 set(ARDUINO_FQBN "STMicroelectronics:stm32:Nucleo_144:pnum=NUCLEO_H723ZG,upload_method=swdMethod")
 add_compile_options(
     -D_BOARD_NUCLEO_H723ZG
     -DVARIANT_H=\"variant_NUCLEO_H723ZG.h\"
     -DUSE_BASIC_TIMER
 )
-# END
+
 # Run the base arduino setup which should detect settings!
 set(ARDUINO_SUPPORT_DIR "${CMAKE_CURRENT_LIST_DIR}/../../fprime-arduino/cmake/toolchain/support")
 include("${ARDUINO_SUPPORT_DIR}/arduino-support.cmake")

@@ -1,10 +1,10 @@
 // ======================================================================
 // \title  OsResources.cpp
-// \author laboratory10
+// \author laboratory10, repurposed for the Nucleo-H7XX by citrusflavr
 // \brief  cpp file for OsResources component implementation class
 // ======================================================================
 
-#include "FeatherM4FreeRTOS/Svc/OsResources/OsResources.hpp"
+#include "OsResources.hpp"
 #include <FreeRTOS.h>
 #include <task.h>
 
@@ -12,7 +12,7 @@ extern char __end__;
 extern "C" char __StackTop;
 extern "C" char* sbrk(int incr); // Current heap end
 
-namespace FeatherM4_FreeRTOS {      
+namespace NucleoH7XX_FreeRTOS{      
 
 static constexpr U8 MAX_TASKS = 10;
 static TaskStatus_t statusArray[MAX_TASKS];
@@ -118,4 +118,4 @@ void OsResources ::Run_handler(const FwIndexType portNum, U32 tick_time_hz) {
     }
 }
 
-}  // namespace FeatherM4_FreeRTOS
+}  // namespace NucleoH7XX_FreeRTOS 

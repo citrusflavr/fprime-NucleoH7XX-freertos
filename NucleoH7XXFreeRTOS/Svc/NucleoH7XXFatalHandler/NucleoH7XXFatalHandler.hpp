@@ -1,27 +1,28 @@
 // ======================================================================
-// \title  FeatherM4FatalHandler.hpp
-// \brief  Fatal Hanlder specifically developed for the FeatherM4 placeholder. Use fprime-util impl
+// \title  NucleoH7XXFatalHandler.hpp
+// \brief  Fatal Handler specifically developed for the FeatherM4 placeholder,
+//         but repurposed for the NucleoH7XX. Use fprime-util impl
 // ======================================================================
 
-#ifndef FeatherM4_FreeRTOS_FatalHandler_HPP
-#define FeatherM4_FreeRTOS_FatalHandler_HPP
+#ifndef NucleoH7XX_FreeRTOS_FatalHandler_HPP
+#define NucleoH7XX_FreeRTOS_FatalHandler_HPP
 
-#include "FeatherM4FreeRTOS/Svc/FeatherM4FatalHandler/FeatherM4FatalHandlerComponentAc.hpp"
+#include "NucleoH7XXFreeRTOS/Svc/NucleoH7XXFatalHandler/NucleoH7XXFatalHandlerComponentAc.hpp"
 
-namespace FeatherM4_FreeRTOS {
+namespace NucleoH7XX_FreeRTOS {
 
-class FeatherM4FatalHandler final : public FeatherM4FatalHandlerComponentBase {
+class NucleoH7XXFatalHandler final : public NucleoH7XXFatalHandlerComponentBase {
   public:
     // ----------------------------------------------------------------------
     // Component construction and destruction
     // ----------------------------------------------------------------------
 
-    //! Construct FeatherM4FatalHandler object
-    FeatherM4FatalHandler(const char* const compName  //!< The component name
+    //! Construct NucleoH7XXFatalHandler object
+    NucleoH7XXFatalHandler(const char* const compName  //!< The component name
     );
 
-    //! Destroy FeatherM4FatalHandler object
-    ~FeatherM4FatalHandler();
+    //! Destroy NucleoH7XXFatalHandler object
+    ~NucleoH7XXFatalHandler();
 
   private:
     // ----------------------------------------------------------------------
@@ -36,6 +37,6 @@ class FeatherM4FatalHandler final : public FeatherM4FatalHandlerComponentBase {
                               ) override;
 };
 
-}  // namespace FeatherM4_FreeRTOS
+}  // namespace NucleoH7XX_FreeRTOS
 
 #endif

@@ -1,4 +1,4 @@
-# fprime-featherm4-freertos/library.cmake
+# fprime-NucleoH7XX-freertos/library.cmake
 # This is a meta-library used only to pull in submodules.
 # No components or modules are defined here.
 
@@ -18,6 +18,6 @@ include_directories(
 #NOTE: This is corresponding to the FILE STM32FreeRTOS.h in STM32FreeRTOS (Github Repo)
 #       which the Arduino library STM32duino_FreeRTOS is pointing to
 # Only call Arduino functions when building for the Arduino platform (not for unit tests)
-if(FPRIME_PLATFORM STREQUAL "FeatherM4_FreeRTOS")
+if(FPRIME_PLATFORM STREQUAL "NucleoH7XX_FreeRTOS")
     target_use_arduino_libraries("STM32FreeRTOS")
 endif()
