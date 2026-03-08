@@ -1,6 +1,1 @@
-[submodule "fprime-freertos"]
-	path = fprime-freertos
-        url = https://github.com/CubeSTEP/fprime-freertos.git
-[submodule "fprime-arduino"]
-        path = fprime-arduino
-        url = https://github.com/CubeSTEP/fprime-arduino.git
+
